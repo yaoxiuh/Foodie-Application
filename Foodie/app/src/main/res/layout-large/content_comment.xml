@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_comment"
+    android:background="@drawable/bg_frame"
+    tools:context="edu.cmu.ece.jsphdev.foodie.ui.CommentActivity">
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_top" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+        <RatingBar
+            android:layout_width="match_parent"
+            android:paddingLeft="160dp"
+            android:paddingRight="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_frame"
+            android:id="@+id/comment_ratingBar"
+           />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_frame"
+                android:id="@+id/edit_comment"
+                android:autoText="true"
+                android:hint="Add you comment here~"
+                android:gravity="top"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/iv_pic0"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:id="@+id/iv_pic1"
+                        android:layout_toRightOf="@+id/iv_pic0"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:id="@+id/iv_pic2"
+                        android:layout_toRightOf="@+id/iv_pic1"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnaddimg"
+                    android:background="@drawable/zx"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_margin="5.0dip" />
+
+            </LinearLayout>
+
+            <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post"
+                android:textColor="#FFFFFF"
+                android:id="@+id/post_comment_btn"
+            android:background="?attr/colorPrimary"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_bottom" />
+</LinearLayout>

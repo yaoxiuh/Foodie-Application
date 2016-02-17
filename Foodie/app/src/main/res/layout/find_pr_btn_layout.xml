@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find People Nearby"
+                android:id="@+id/find_people_btn"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button"
+                android:layout_column="0"
+                android:onClick="onFindClick" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find Restaurant"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button"
+                android:id="@+id/find_restaurant_btn"
+                android:layout_column="1"
+                android:onClick="onFindClick" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
